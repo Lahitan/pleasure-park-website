@@ -22,4 +22,5 @@ cd pleasure-park-website
 
 3. Start Tailwind build: npm run build:css
 
-
+## Live Link
+pleasure-park.netlify.app
