@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pleasure Park PH</title>
+    <link
+      rel="shortcut icon"
+      href="assets/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./dist/input.css" rel="stylesheet" />
+  </head>
+  <body class="font-inter bg-gray-50">
+    <header class="flex justify-between mx-2 sticky">
+      <!-- <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between"> -->
+
+      <a href="./"
+        ><img
+          src="./assets/images/PPlogo 1.svg"
+          alt="logo"
+          loading="lazy"
+           class="w-24 sm:w-28 md:w-32 lg:w-44 xl:w-44 h-auto"
+      /></a>
+
+      <button id="menu-btn" class="md:hidden text-3xl focus:outline-none">
+       <img src="./assets/icons/menu.png" alt="open pleasure park menue" id="menu-icon" width="20px" height="30px">
+    </button>
+
+      <nav
+        class=" hidden md:flex justify-evenly w-3/6 items-center text-gray-500 font-semibold font-Poppins"
+      >
+        <a class="hover:text-sky transition duration-300" href="#home">Home</a>
+        <a class="hover:text-sky transition duration-300" href="#activities">Activities</a>
+        <a class="hover:text-sky transition duration-300" href="#pricing">Pricing</a>
+        <a class="hover:text-sky transition duration-300" href="#location">Map</a>
+        <a class="hover:text-sky transition duration-300" href="#Nearby-hotels">Nearby Hotels</a>
+        <a class="hover:text-sky transition duration-300" href="#about">About</a>
+        <a class="hover:text-sky transition duration-300" href="#contact">Contact</a>
+      </nav>
+
+       <!-- Sliding Mobile Menu -->
+  <div id="mobile-menu"
+    class="fixed top-0 left-0 w-[14.5rem] h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden flex flex-col p-6 space-y-4 text-sm font-medium">
+    <button id="close-btn" class="text-2xl self-center text-gray-700">
+       <img src="./assets/icons/close.png" alt="open pleasure park menue" width="20px" height="30px">
+    </button>
+        <a class="hover:text-sky transition duration-300" href="#home">Home</a>
+        <a class="hover:text-sky transition duration-300" href="#activities">Activities</a>
+        <a class="hover:text-sky transition duration-300" href="#pricing">Pricing</a>
+        <a class="hover:text-sky transition duration-300" href="#location">Map</a>
+        <a class="hover:text-sky transition duration-300" href="#Nearby-hotels">Nearby Hotels</a>
+        <a class="hover:text-sky transition duration-300" href="#about">About</a>
+        <a class="hover:text-sky transition duration-300" href="#contact">Contact</a>
+  </div>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="bg-hero-pattern min-h-screen bg-cover bg-center flex justify-center items-center"
+    >
+      <div>
+        <h1 class="font-semibold 4xl md:text-6xl text-light">
+          Discover Fun, Adventure & Relaxation at<br class="hidden md:block" />
+          Pleasure Park Port Harcourt
+        </h1>
+
+        <p class="mt-4 font-body text-light text-lg md:text-xl max-w-2xl">
+          From thrilling activities to peaceful strolls, Pleasure Park is the
+          perfect escape for families, kids, friends, and explorers. Come make
+          memories that last a lifetime.
+        </p>
+
+        <div class="mt-10">
+          <a
+            href="#activities"
+            class="border-2 border-solid rounded-xl text-light font-medium px-6 py-3 font-Poppins shadow-md transition duration-300 hover:bg-dark md:text-lg"
+            >Explore Activities</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!--Activity Section-->
+
+    <section id="activities" class="py-16 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="text-3xl md:text-4xl font-semibold text-center text-sky mb-10"
+        >
+          Fun Activities for Everyone
+        </h2>
+
+        <div
+          id="activity-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+
+          <!-- Cards will be inserted here by JS -->
+        </div>
+
+        <div class="max-w-full flex justify-end">
+          <a
+            href="#activity"
+            class="bg-yellow-400 px-6 py-3 mt-8 rounded-xl text-lg font-medium font-Poppins shadow-md transition duration-300 hover:bg-card"
+          >
+            See more<img
+              src="./assets/icons/Icon_heart.svg"
+              alt="heart-icon"
+              class="inline-block ml-2"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--Pricing Section-->
+
+    <section id="pricing" class="py-16 bg-sky">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-semibold text-white mb-4">Pricing Plans</h2>
+        <p class="text-blue-100 mb-12 text-xl">
+          Choose the perfect plan for your day of fun and adventure!
+        </p>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Basic Plan -->
+          <div
+            class="pricing-card opacity-0 scale-95 border-4 border-gray-200 p-10 rounded-xl shadow bg-transparent transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl"
+          >
+            <h3 class="text-xl font-bold text-opacity-90 text-white mb-6">
+              Basic Fun Pass
+              <img
+                class="inline invert"
+                src="./assets/icons/paper-plane.png"
+                alt="basic icon"
+                width="25px"
+                height="30px"
+               
+              />
+            </h3>
+
+            <ul class="text-left text-blue-50 mb-6 space-y-3">
+              <li>✓ Boat Ride or Train Ride</li>
+              <li>✓ Access to Kids Playground</li>
+              <li>✓ 1 Soft Drink</li>
+            </ul>
+            <p class="text-2xl font-bold text-white mb-4">₦3,500</p>
+            <button
+              class="px-6 py-2 bg-blue-950 text-white rounded-lg hover:bg-blue-800 transition duration-300"
+            >
+              Get Started
+            </button>
+          </div>
+
+          <!-- Adventure Plan -->
+          <div
+            class="pricing-card opacity-0 scale-95 p-10 rounded-xl shadow-lg bg-white transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl"
+          >
+            <h3 class="text-xl font-bold  text-opacity-80 text-blue-950 mb-6">
+              Adventure Pass
+              <img
+                class="inline"
+                src="./assets/icons/icons8-the-flash-sign.svg"
+                alt="basic icon"
+                width="25px"
+                height="30px"
+              />
+            </h3>
+            <ul class="text-left text-gray-600 mb-6 space-y-3">
+              <li>✓ Boat Ride + Train Ride</li>
+              <li>✓ Obstacle Course</li>
+              <li>✓ Swimming Pool</li>
+              <li>✓ Access to Kids Playground</li>
+              <li>✓ 1 Snack & Drink</li>
+            </ul>
+            <p class="text-2xl font-bold text-blue-950 mb-4">₦7,000</p>
+            <button
+              class="px-6 py-2 bg-yellow-400 text-white rounded-lg hover:bg-card transition duration-300"
+            >
+              Most Popular
+            </button>
+          </div>
+
+          <!-- Family Plan -->
+          <div
+            class="pricing-card opacity-0 scale-95 border-4 border-gray-200 p-10 rounded-xl shadow bg-transparent transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl"
+          >
+            <h3 class="text-xl font-bold  text-opacity-90 text-white mb-6">
+              Family Package
+              <img
+                class="inline invert"
+                src="./assets/icons/user-group-crown.svg"
+                alt="basic icon"
+                width="25px"
+                height="30px"
+              />
+            </h3>
+            <ul class="text-left text-blue-50 mb-6 space-y-3">
+              <li>✓ Everything in Adventure Pass</li>
+              <li>✓ Go-Kart Ride</li>
+              <li>✓ Reserved Picnic Area</li>
+              <li>✓ Family Photo Session</li>
+            </ul>
+            <p class="text-2xl font-bold text-white mb-4">
+              ₦20,000 <span class="text-sm text-blue-50">(4 people)</span>
+            </p>
+            <button
+              class="px-6 py-2 bg-blue-950 text-white rounded-lg hover:bg-blue-800 transition duration-300"
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Map Section-->
+
+    <section id="location" class="py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-semibold mb-6 text-blue-950">Find Us Here</h2>
+        <p class="text-blue-950 text-xl mb-8">
+          Come visit Pleasure Park and enjoy unforgettable moments with your
+          loved ones.
+        </p>
+
+        <div
+          class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg"
+        >
+          <iframe
+            class="absolute top-0 left-0 w-full h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.952712356638!2d7.010145374014264!3d4.815924441905993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cdb5e55a2ebf%3A0xd7b5b0a93e098f66!2sPleasure%20Park%2C%20Port%20Harcourt!5e0!3m2!1sen!2sng!4v1682960422825!5m2!1sen!2sng"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+
+        <a
+          href="https://www.google.com/maps/place/Pleasure+Park,+Port+Harcourt/"
+          target="_blank"
+          class="inline-block mt-6 px-6 py-3 bg-dark text-white rounded-lg hover:bg-blue-800 transition duration-300"
+        >
+          View on Google Maps
+        </a>
+      </div>
+    </section>
+
+     <!--Nearby Hotels Section-->
+
+      <section id="Nearby-hotels" class="py-16 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="text-3xl md:text-4xl font-semibold text-center text-sky mb-10"
+        >
+         Hotels Nearby
+        </h2>
+
+        <div
+          id="hotels"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Cards will be inserted here by JS -->
+           
+        </div>
+         <div class="max-w-full flex justify-end">
+          <a
+            href="https://www.google.com/search?q=hotels+around+pleasure+park+port+harcourt&oq=hotels&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIUCAEQRRg5GEMYsQMYyQMYgAQYigUyBggCEEUYQDINCAMQABiSAxiABBiKBTIGCAQQRRg8MgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINDg5MWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
+            target="_blank"
+            class="bg-yellow-400 px-6 py-3 mt-8 rounded-xl text-lg font-medium font-Poppins shadow-md transition duration-300 hover:bg-card"
+          >
+            See more<img
+              src="./assets/icons/Icon_heart.svg"
+              alt="heart-icon"
+              class="inline-block ml-2"
+            />
+          </a>
+          </div>
+        </div>
+     </section>
+
+     <!-- About Section -->
+
+     <section id="#about" class="py-16 px-6 bg-gray-50 shadow-md border-2 rounded-lg">
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="text-3xl md:text-4xl font-semibold text-center text-blue-950 mb-10"
+        >
+        About Us
+        </h2>
+
+        <div class="grid grid-cols-2 gap-3 h-68 rounded-2xl">
+          <div class="max-w-3x flex flex-col">
+          <p class="self-center p-4 text-lg text-blue-950 text-justify">
+              Welcome to <strong>Pleasure Park</strong>, where adventure meets relaxation
+              Nestled in the heart of Port Harcourt, we are your go-to destination for family fun,
+              bonding, and unforgettable experiences.
+          </p>
+
+          <p class="self-center p-4 text-lg text-blue-950 text-justify">
+            Whether you're looking to ride a boat, enjoy the thrill of go-kart racing,
+            or just watch your kids laugh in our secure playground, we've got something
+            for every member of the family.
+        </p>
+          </div>
+         <div class=" hidden lg:block mt-10 aspect-w-16 aspect-h-15 rounded-lg overflow-hidden shadow-lg">
+          <iframe 
+              class="w-full h-full" 
+              src="https://www.youtube.com/embed/yOa33w2m3d0?si=NVcSmUkeeyLPQGbX" 
+              title="About Our Park" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+          </iframe>
+        </div>
+        </div>
+      </div>
+      </section>
+
+      <!-- Contact Section -->
+     <section id="contact" class="py-20 px-4">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+    
+    <!-- Left Column: Contact Info -->
+    <div class="space-y-6">
+      <h2 class="text-3xl font-bold text-blue-950">Get in Touch</h2>
+      <p class="text-gray-950">
+        We'd love to hear from you! Whether it's a question about our park, pricing, or activities, feel free to reach out.
+      </p>
+
+      <div class="space-y-4">
+        <div class="flex items-start gap-4">
+          <span class="text-blue-950 text-2xl">
+            <img src="./assets/icons/location.png" alt="pleasure park website location" width="25px"
+                height="30px" class="opacity-30">
+          </span>
+          <p class="text-blue-950">
+            123 Adventure Avenue, Funland, Lagos, Nigeria
+          </p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="text-blue-950 text-2xl"><img src="./assets/icons/telephone.png" alt="phone pleasure park " width="25px"
+                height="30px" class="opacity-30"></span>
+          <p class="text-blue-950">+234 123 456 7890</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="text-blue-950 text-2xl"><img src="./assets/icons/mail.png" alt="pleasure park mail" width="25px"
+                height="30px" class="opacity-30"></span>
+          <p class="text-blue-950">hello@pleasureparkph.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Contact Form -->
+    <div class="bg-white p-8 rounded-xl shadow-lg">
+      <form class="space-y-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1" for="name">Full Name</label>
+          <input id="name" name="name" type="text" required 
+                 class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1" for="email">Email Address</label>
+          <input id="email" name="email" type="email" required 
+                 class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1" for="message">Your Message</label>
+          <textarea id="message" name="message" rows="4" required 
+                    class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky"></textarea>
+        </div>
+
+        <button type="submit"
+                class="w-1/2 bg-dark text-white py-3 rounded-md font-semibold hover:bg-blue-800 transition duration-300">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+    <footer class="bg-dark  text-blue-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- Logo + Brief -->
+          <div>
+            <h2 class="text-2xl font-bold mb-3">Pleasure Park</h2>
+            <p class="text-sm leading-relaxed">
+              A family-friendly adventure park offering exciting rides, games, and unforgettable memories in Lagos.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+               <li> <a class="hover:text-sky transition duration-300" href="#home">Home </a> </li>
+              <li><a href="#about" class="hover:text-sky transition duration-300">About Us</a></li>
+              <li><a href="#activities" class="hover:text-sky transition duration-300">Activities</a></li>
+              <li><a href="#pricing" class="hover:text-sky transition duration-300">Pricing</a></li>
+              <li><a href="#contact" class="hover:text-sky transition duration-300">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact & Social -->
+          <div>
+              <h3 class="text-lg font-semibold mb-3">Contact</h3>
+              <p class="text-sm mb-2"><img src="./assets/icons/telephone.png" alt="telephone to call pleasure park" width="25px"
+                height="30px" class="invert">+234 123 456 7890</p>
+              <p class="text-sm mb-4"><img src="./assets/icons/mail.png" alt=" mail for pleasurepark" width="25px"
+                height="30px" class="invert"> hello@pleasureparkph.com</p>
+              </div>
+          </div>
+
+          <!-- Bottom -->
+          <div class="mt-10 text-center text-sm text-gray-200 border-t border-sky pt-4">
+            &copy; 2025 PleasurePark. All rights reserved.
+          </div>
+        </footer>
+
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
