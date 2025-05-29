@@ -15,7 +15,7 @@ This is a responsive website for Pleasure Park Port Harcourt. It helps users exp
 
 ## ⚙️ Setup Instructions
 
-1. Clone the repository: git clone [https://github.com/your-username/pleasure-park-website.git]
+1. Clone the repository: git clone [https://github.com/lahitan/pleasure-park-website.git]
 cd pleasure-park-website
 
 2. Install dependencies: npm install

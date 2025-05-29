@@ -2,6 +2,10 @@
 
 module.exports = {
   content: ["./index.html", "./*.js"], // Adjust path to your project
+   safelist: [
+    'translate-x-0',
+    'translate-x-full',
+  ],
   theme: {
     extend: {
       colors: {

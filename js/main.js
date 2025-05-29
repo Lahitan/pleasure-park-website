@@ -231,17 +231,35 @@ document.querySelectorAll("#hotels > div").forEach((hotelCard) =>
   viewObserver.observe(hotelCard)
 );
 
-//Menue button and Close button
-const menuBtn = document.getElementById("menu-btn");
+
+// Menu button 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menu-btn");
   const closeBtn = document.getElementById("close-btn");
   const mobileMenu = document.getElementById("mobile-menu");
 
+  // Open mobile menu
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.remove("translate-x-full");
     mobileMenu.classList.add("translate-x-0");
   });
 
-  closeBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("translate-x-0");
-    mobileMenu.classList.add("translate-x-full");
+  // Close mobile menu with close button
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("translate-x-0");
+      mobileMenu.classList.add("translate-x-full");
+    });
+  }
+
+  // Close mobile menu when any nav link is clicked
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("translate-x-0");
+      mobileMenu.classList.add("translate-x-full");
+    });
   });
+});
+
+

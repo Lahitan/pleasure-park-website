@@ -3,7 +3,7 @@ node_modules/
 package-lock.json
 
 # Tailwind output
-dist/
+# dist/
 
 # Logs
 npm-debug.log*
