@@ -263,3 +263,42 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Form functionaity
+const form = document.querySelector("form");
+const responseMsg = document.getElementById("form-response");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then(response => {
+      if (response.ok) {
+        responseMsg.classList.remove("hidden");
+        form.reset();
+      } else {
+        responseMsg.textContent = "Oops! Something went wrong.";
+        responseMsg.classList.remove("hidden");
+        responseMsg.classList.replace("text-green-600", "text-red-600");
+      }
+    });
+});
+
+//Booking Modal Overlay
+
+function openModal(plan, price) {
+  document.getElementById("booking-modal").classList.remove("hidden");
+  document.getElementById("plan-name").textContent = plan + " Plan";
+  document.getElementById("plan-price").textContent = price;
+}
+
+function closeModal() {
+  document.getElementById("booking-modal").classList.add("hidden");
+}
