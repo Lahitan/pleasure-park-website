@@ -16,6 +16,8 @@
       rel="stylesheet"
     />
     <link href="./dist/input.css" rel="stylesheet" />
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
   </head>
 
   <body class="font-inter bg-gray-50">
@@ -257,7 +259,7 @@
         <a
           href="https://www.google.com/maps/place/Pleasure+Park,+Port+Harcourt/"
           target="_blank"
-          class="inline-block mt-6 px-6 py-3 bg-dark text-white rounded-lg hover:bg-[#003566d0]transition duration-300"
+          class="inline-block mt-6 px-6 py-3 bg-dark text-white rounded-lg hover:bg-[#003566d0] transition duration-300"
         >
           View on Google Maps
         </a>
@@ -353,7 +355,7 @@
                 height="30px" class="opacity-30">
           </span>
           <p class="text-blue-950">
-            123 Adventure Avenue, Funland, Lagos, Nigeria
+            R2Q6+7X9 Peace Park, Between Army Bori Camp and Airforce base junction, City Centre, Port Harcourt
           </p>
         </div>
         <div class="flex items-start gap-4">
@@ -461,27 +463,33 @@
     >
       &times;
     </button>
-    <h2 class="text-2xl font-bold text-center mb-4">Book Your Plan</h2>
-    <p class="text-center mb-2 text-lg font-medium" id="plan-name"></p>
-    <p class="text-center mb-4 text-xl text-blue-600" id="plan-price"></p>
+    <h2 class="text-2xl font-bold text-center text-dark mb-4">Book Your Plan</h2>
+    <p class="text-center mb-2 text-lg font-medium text-gray-300" id="plan-name"></p>
+    <p class="text-center mb-4 mx-auto text-xl text-dark bg-gray-50 shadow-lg w-1/2 rounded-lg" id="plan-price"></p>
 
     <!-- Optional: User Info -->
     <input
-      type="text"
-      placeholder="Your Name"
-      class="w-full border p-2 rounded mb-3"
-    />
-    <input
-      type="email"
-      placeholder="Your Email"
-      class="w-full border p-2 rounded mb-4"
-    />
+  id="user-name"
+  type="text"
+  placeholder="Your Name"
+  class="w-full border p-2 rounded mb-3"
+/>
+<input
+  id="user-email"
+  type="email"
+  placeholder="Your Email"
+  class="w-full border p-2 rounded mb-4"
+/>
 
-    <button
-      class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
-    >
-      Proceed to Payment
-    </button>
+<input type="hidden" id="plan-amount" />
+
+<button
+  onclick="payWithPaystack()"
+  class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+>
+  Proceed to Payment
+</button>
+
   </div>
 </div>
 

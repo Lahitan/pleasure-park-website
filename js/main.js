@@ -292,13 +292,50 @@ form.addEventListener("submit", function (e) {
 });
 
 //Booking Modal Overlay
-
 function openModal(plan, price) {
   document.getElementById("booking-modal").classList.remove("hidden");
   document.getElementById("plan-name").textContent = plan + " Plan";
   document.getElementById("plan-price").textContent = price;
+  document.getElementById("plan-amount").value = price.replace(/[₦,]/g, '').trim();
 }
 
 function closeModal() {
   document.getElementById("booking-modal").classList.add("hidden");
+}
+
+function payWithPaystack() {
+  const email = document.getElementById("user-email").value;
+  const amount = parseInt(document.getElementById("plan-amount").value) * 100; // convert to kobo
+  const name = document.getElementById("user-name").value;
+
+  if (!email || !amount || !name) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  const handler = PaystackPop.setup({
+    key: 'pk_test_be52a45a74922d0abfddcb59d862d9bacf21f686', // Replace with your Paystack public key
+    email: email,
+    amount: amount,
+    currency: "NGN",
+    ref: 'PP_' + Math.floor(Math.random() * 1000000000), // Unique transaction reference
+    metadata: {
+      custom_fields: [
+        {
+          display_name: "Customer Name",
+          variable_name: "customer_name",
+          value: name
+        }
+      ]
+    },
+    callback: function(response) {
+      alert("Payment successful! Reference: " + response.reference);
+      closeModal();
+    },
+    onClose: function() {
+      alert("Payment cancelled");
+    }
+  });
+
+  handler.openIframe();
 }
