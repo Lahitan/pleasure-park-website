@@ -41,7 +41,7 @@ const activities = [
     title: "Go-Kart Racing",
     description:
       "Feel the adrenaline rush with our safe and exciting go-kart track. Fun for thrill-seekers of all ages!",
-    price: "₦5,000 for 10 minutes",
+    price: "₦900 for 10 minutes",
     image: "./assets/images/kart-ride.webp",
   },
   {
@@ -73,32 +73,39 @@ const activities = [
     image: "./assets/images/cinema.webp",
   },
   {
-    title: "Go-Kart Racing",
+    title: "Bouncing",
     description:
-      "Feel the adrenaline rush with our safe and exciting go-kart track. Fun for thrill-seekers of all ages!",
-    price: "₦5,000 for 10 minutes",
-    image: "./assets/images/kart-ride.webp",
+      "Feel the adrenaline rush with our safe and exciting bouncing castle. Fun for kids, and teens!",
+    price: "₦900 for 10 minutes",
+    image: "./assets/images/bouncing.webp",
   },
   {
-    title: "Go-Kart Racing",
+    title: "Paint-Ball",
     description:
-      "Feel the adrenaline rush with our safe and exciting go-kart track. Fun for thrill-seekers of all ages!",
-    price: "₦5,000 for 10 minutes",
-    image: "./assets/images/kart-ride.webp",
+      "Form colorful  painting on walls while shooting colorful balls , entertaining for teens and adults.",
+    price: "₦1,000",
+    image: "./assets/images/paintball.webp",
   },
   {
-    title: "Go-Kart Racing",
+    title: "Picnic",
     description:
-      "Feel the adrenaline rush with our safe and exciting go-kart track. Fun for thrill-seekers of all ages!",
-    price: "₦5,000 for 10 minutes",
-    image: "./assets/images/kart-ride.webp",
+      "Unwind with a view. Bring a blanket and enjoy a calm evening under the golden sunset. Our picnic spots are perfect for romantic dates or family bonding.",
+    price: "₦2,000",
+    image: "./assets/images/picnic.webp",
   },
   {
-    title: "Go-Kart Racing",
+    title: "Bicycle Rentals",
     description:
-      "Feel the adrenaline rush with our safe and exciting go-kart track. Fun for thrill-seekers of all ages!",
-    price: "₦5,000 for 10 minutes",
-    image: "./assets/images/kart-ride.webp",
+      "Explore on wheels. Cruise the scenic paths of Pleasure Park with our affordable bike rentals. Choose from solo or tandem bikes for a fun and active day out.",
+    price: "₦1,000 for 30 minutes",
+    image: "./assets/images/bicycle.webp",
+  },
+  {
+    title: "Kids Playground",
+    description:
+      "Safe, fun, and exciting play zones designed especially for kids aged 2–10.",
+    image: "./assets/images/kids-play.webp",
+    price: "₦1,000 per child",
   },
 ];
 
